@@ -52,16 +52,5 @@ pipeline{
                 }
             }
         }
-
-        stage('push') {
-            agent any
-            steps {
-                script {
-                    sh '''
-                       docker login -u ${USERNAME} -p ${PASSWORD}
-                       docker push ${IMAGE_NAME}:${IMAGE_TAG}
-                    '''
-                }
-            }
-        }
+    }
 }
