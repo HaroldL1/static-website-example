@@ -1,2 +1,2 @@
-FROM apache
-COPY ./static-example/ /var/www/html
+FROM nginx
+COPY ./static-website-example/ /usr/share/nginx/html
